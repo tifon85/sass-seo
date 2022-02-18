@@ -1,0 +1,212 @@
+
+@import "colors";
+@import "tipografias";
+
+/* RESPONSIVE */
+
+@media (min-width: 576px) {
+
+    /* MENU */
+
+    .navBackground {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 25vh;
+        /* degradado */
+        background-color: $color-nav-tablet;
+        background-image: linear-gradient(315deg, $color-nav-tablet 0%, $back-color-nav2-tablet 74%);
+    }
+
+    /* INDEX */
+
+    .seccionIndex {
+        aside {
+            img {
+                width: auto;
+            }
+        }
+    }
+
+    /* PARALLAX */
+
+    .parallax {
+        background-image: url("../img/software-a-medida.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;          
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        h2 {
+            font-size: 4rem; 
+            text-align: center; 
+            background-color: $back-color-parallax;
+            margin-top: 20%;
+        }
+        p {
+            font-size: 2.5rem; 
+            text-align: center; 
+            background-color: $back-color-parallax;
+            text-transform: capitalize;
+        }
+    }
+    
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+
+    /* FOOTER */
+
+    footer {
+        grid-area: pie;
+        /*height: 20vh;*/
+        background-color: $back-color-footer;
+    }
+
+    /* PAGINA SERVICIOS */
+
+    .tiposServicios {
+        grid-area: tipoServicio;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        section {
+            justify-items: center;
+            border: solid;
+            /* TRANSICIÓN */
+            transition: border 2ms;
+            &:hover {
+                border: $color-border-servicios solid;
+            }
+        }
+    }
+
+    /* FOOTER */
+
+    .datosFooter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        section {
+            text-align: center;
+            padding: 2%;
+            width: 50%;
+        }
+    }
+
+    .ayuda {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .rrss {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+
+    /* MAIN INDEX*/
+
+    .seccionIndex {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 40vh;
+        padding: 5%;
+        border: solid;
+    }
+
+    #portada {
+        height: 75vh;
+    }
+
+    .orden {
+        order: 10;
+    }
+
+    /* LOGO */
+
+    .logo {
+        margin: 2.5%;
+        align-content: left;
+    }
+
+    /* MENU */
+
+    .navBackground {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 25vh;
+        /* degradado */
+        background-image: linear-gradient(to right, $back-color-nav1-desktop 20%,$back-color-nav2-desktop-y-submit 100%);
+    }
+
+    .menuFlex {
+        ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+            li {
+                text-align: right;
+                list-style-type: none;
+                font-size: 150%;
+                font-family: $tipo1;
+                /*background-color: white;*/
+                font-weight: bold;
+                margin: 5%;
+                color: black;
+                &:hover {
+                    background-color: $color-back-hover-desktop;
+                    color: $color-hover-desktop;
+                    text-align: center;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    /*  PAGINA CONTACTO */
+
+    .direccion {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        font-size: 50%;
+        align-items: center;
+        padding: 5%;
+    }
+
+    /* formulario contacto */
+
+    .datosPersonales {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        align-content: stretch;
+        justify-content: space-around;
+        margin-bottom: 2%;
+        width: 90%;
+    }
+}
